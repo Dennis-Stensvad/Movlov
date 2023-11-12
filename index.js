@@ -1,9 +1,9 @@
 
 const cardObjectDefinitions = [
-    {id:1, imagePath:'/assets/MovlovGuru.png'},
-    {id:2, imagePath:'/assets/MovlovBobaFett.png'},
-    {id:3, imagePath:'/assets/MovlovSari2.png'},
-    {id:4, imagePath:'/assets/MovlovBrorWiliam.png'},
+    {id:1, imagePath:'assets/MovlovGuru.png'},
+    {id:2, imagePath:'assets/MovlovBobaFett.png'},
+    {id:3, imagePath:'assets/MovlovSari2.png'},
+    {id:4, imagePath:'assets/MovlovBrorWiliam.png'},
 ]
 
 const cardBackImgPath = '/assets/MovlovBackside.jpeg'
