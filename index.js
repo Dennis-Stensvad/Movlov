@@ -6,7 +6,7 @@ const cardObjectDefinitions = [
     {id:4, imagePath:'assets/MovlovBrorWiliam.png'},
 ]
 
-const cardBackImgPath = '/assets/MovlovBackside.jpeg'
+const cardBackImgPath = 'assets/MovlovBackside.jpeg'
 
 const cardContainerElem = document.querySelector('.card-container')
 
