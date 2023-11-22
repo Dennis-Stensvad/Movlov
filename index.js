@@ -1,4 +1,3 @@
-
 const cardObjectDefinitions = [
     {id:1, imagePath:'assets/MovlovGuru.png'},
     {id:2, imagePath:'assets/MovlovBobaFett.png'},
@@ -8,9 +7,78 @@ const cardObjectDefinitions = [
 
 const cardBackImgPath = 'assets/MovlovBackside.jpeg'
 
+let cards = []
+
+const playGameButtonElem = document.getElementById('playGame')
+
 const cardContainerElem = document.querySelector('.card-container')
 
-createCards()
+const collapsedGridAreaTemplate = '"a a" "a a"'
+const cardCollectionCellClass = ".card-pos-a"
+
+loadGame()
+
+function loadGame(){
+    createCards()
+
+    cards = document.querySelectorAll('.card')
+
+    playGameButtonElem.addEventListener('click', ()=>startGame())
+}
+
+function startGame(){
+    initializeNewGame()
+    startRound()
+}
+
+function initializeNewGame(){
+
+}
+
+function startRound(){
+    initializeNewRound()
+    collectCards()
+    flipCards(true)
+}
+
+function initializeNewRound(){
+
+}
+
+function collectCards(){
+    transformGridArea(collapsedGridAreaTemplate)
+    addCardsToGridAreaCell(cardCollectionCellClass)
+}
+
+function transformGridArea(areas){
+    cardContainerElem.style.gridTemplateAreas = areas
+}
+
+function addCardsToGridAreaCell(cellPositionClassName){
+    const cellPositionElem = document.querySelector(cellPositionClassName)
+
+    cards.forEach((card, index) =>{
+        addChildElement(cellPositionElem, card)
+    })
+}
+
+function flipCard(card, flipToBack){
+    const innerCardElem = card.firstChild
+
+    if(flipToBack && !innerCardElem.classList.contains('flip-it')){
+        innerCardElem.classList.add('flip-it')
+    } else if(innerCardElem.classList.contains('flip-it')){
+        innerCardElem.classList.remove('flip-it')
+    }
+}
+
+function flipCards(flipToBack){
+    cards.forEach((card,index)=>{
+        setTimeout(() => {
+            flipCard(card,flipToBack)
+        },index * 100)
+    })
+}
 
 function createCards(){
     cardObjectDefinitions.forEach((cardItem)=>{
