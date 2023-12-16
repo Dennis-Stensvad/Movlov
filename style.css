@@ -61,6 +61,7 @@ main{
     width: var(--card-width);
     perspective: 1000px;
     cursor: pointer;
+    transition: transform 0.6s ease-in-out;
 }
 .card-inner{
     position: relative;
@@ -197,4 +198,12 @@ header{
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.card.shuffle-left{
+    transform: translateX(300px) translateY(40px)
+}
+
+.card.shuffle-right{
+    transform: translateX(350px) translateY(-40px)
 }
