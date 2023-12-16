@@ -19,6 +19,7 @@
 body{
     height: 100vh;
     font-family: var(--primary-font);
+    background-color: saddlebrown;
 }
 
 main{
