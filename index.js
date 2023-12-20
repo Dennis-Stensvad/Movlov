@@ -1,12 +1,15 @@
 // Credit to this youtube video for the fundation of the project: 
 // https://www.youtube.com/watch?v=Bj6lC93JMi0
 
+//Card definitions
 const cardObjectDefinitions = [
     {id:1, imagePath:'assets/MovlovGuru.png'},
     {id:2, imagePath:'assets/MovlovBobaFett.png'},
     {id:3, imagePath:'assets/MovlovSari2.png'},
     {id:4, imagePath:'assets/MovlovBrorWiliam.png'},
 ]
+
+let deck = [] //The deck selected by the player
 
 const guruID = 1
 
@@ -307,6 +310,7 @@ function addCardsToAppropriateCell(){
         addCardToGridCell(card)
     })
 }
+
 
 function createCards(){
     cardObjectDefinitions.forEach((cardItem)=>{

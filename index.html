@@ -50,10 +50,50 @@
             </div>
         </div>
     </main>
+    <!--
     <audio autoplay loop controls>
         <source src="assets/mainmusic.mp3">
         Your browser does not support the audio element.
     </audio>
+
+    -->
+   
+    <div class="deck-select-container">
+        <h1>Select 20 cards for your deck!</h1>
+        <div class="card-select-container">
+            <div class="select-grid-item">
+                <div class="select-card">
+                    <img src="assets/MovlovGuru.png" class="card-img">
+                    <input type="number" id="numGuru" name="numGuru" min="0" max="20">
+                </div>
+            </div>
+            <div class="select-grid-item">
+                <div class="select-card">
+                    <img src="assets/MovlovBobaFett.png" class="card-img">
+                    <input type="number" id="numBoba" name="numBoba" min="0" max="20">
+                </div>
+            </div>
+            <div class="select-grid-item">
+                <div class="select-card">
+                    <img src="assets/MovlovSari2.png" class="card-img">
+                    <input type="number" id="numSari" name="numSari" min="0" max="20">
+                </div>
+            </div>
+            <div class="select-grid-item">
+                <div class="select-card">
+                    <img src="assets/MovlovBrorWiliam.png" class="card-img">
+                    <input type="number" id="numBrorW" name="numBrorW" min="0" max="20">
+                </div>
+            </div>
+            <div class="select-grid-item">
+                <div class="select-card">
+                    <img src="assets/MovlovOloOlo.png" class="card-img">
+                    <input type="number" id="numOlo" name="numOlo" min="0" max="20">
+                </div>
+            </div>
+        </div>
+        <button onclick="selectDeck()">Confirm deck choice</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

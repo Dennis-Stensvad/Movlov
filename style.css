@@ -61,6 +61,23 @@ main{
     align-items: center;
 }
 
+.deck-select-container{
+    text-align: center;
+}
+.card-select-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+.select-grid-item{
+    margin: 0px 50px 100px 50px;
+}
+.select-card{
+    height: var(--card-height-lg);
+    width: var(--card-width-lg);
+}
+
+
 .card{
     position: absolute;
     height: var(--card-height-lg);
@@ -240,4 +257,9 @@ header{
     .header-img{
         height:55px;
     }
+}
+
+.deck-select-container{
+    height: 100vh;
+    background-color: var(--secondary-color);
 }
